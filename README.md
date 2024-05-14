@@ -19,7 +19,8 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 [Arquitetura Proposta Webflux](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_webflux.png)
 
 ## Fluxograma
-[FLuxograma](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_proposta.drawio)
+![FLuxograma draw io](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_proposta.drawio) <br>
+![FLuxograma Image](https://github.com/fahpsouza/notifications/blob/main/docs/fluxograma.png)
 
 ## Pré-requisitos
 Antes de começar, verifique se você possui os seguintes requisitos:
@@ -52,15 +53,15 @@ Exemplos de como você pode utilizar as APIs criadas. Por exemplo:
 
 http
 ## Para Testar importe a Collection do Json em seu Postman na raiz do projeto
-- [Notifications Webflux.postman_collection.json](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/Notifications%20Webflux.postman_collection.json)
+- [Notifications Webflux.postman_collection.json](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/Notifications%20Webflux.postman_collection.json) <br>
 ## Endpoints
-![/notification](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/notification_endpoints.png)
-![/user](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/user_endpoints.png)
+![/notification](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/notification_endpoints.png) <br>
+![/user](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/user_endpoints.png) <br>
 ![/job](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/job_endpoints.png)
 
 Contato
 Fabio Henrique Piedade de Souza
 
-[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | 
-[Email](fabio.henrique.psouza@gmail.com) | 
+[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | <br>
+[Email](fabio.henrique.psouza@gmail.com) | <br>
 [Link do Projeto](https://github.com/fahpsouza/notifications-reative-webflux) 
