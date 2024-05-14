@@ -13,14 +13,15 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - docker-compose.yml
 
 ## Arquitetura Proposta
-[Arquitetura Proposta](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/Notifications%20Webflux%20Reative%20App.pptx)
+[Arquitetura Proposta](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/Notifications%20Webflux%20Reative%20App.pptx) <br>
 
 ## Arquitetura Proposta Webflux
-[Arquitetura Proposta Webflux](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_webflux.png)
+[Arquitetura Proposta Webflux](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_webflux.png) <br>
 
 ## Fluxograma
-![FLuxograma draw io](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_proposta.drawio) <br>
-![FLuxograma Image](https://github.com/fahpsouza/notifications/blob/main/docs/fluxograma.png)
+[FLuxograma draw io](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_proposta.drawio)<br>
+
+![Fuxograma Image](https://github.com/fahpsouza/notifications-reative-webflux/blob/main/docs/fluxograma.png "Fluxograma Image") <br>
 
 ## Pré-requisitos
 Antes de começar, verifique se você possui os seguintes requisitos:
