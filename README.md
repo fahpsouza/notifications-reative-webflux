@@ -13,9 +13,13 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - docker-compose.yml
 
 ## Arquitetura Proposta
+[Arquitetura Proposta](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/Notifications%20Webflux%20Reative%20App.pptx)
 
-## FLuxograma
-[FLuxograma](https://github.com/fahpsouza/notifications/blob/main/docs/arquitetura_proposta.drawio)
+## Arquitetura Proposta Webflux
+[Arquitetura Proposta Webflux](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_webflux.png)
+
+## Fluxograma
+[FLuxograma](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/arquitetura_proposta.drawio)
 
 ## Pré-requisitos
 Antes de começar, verifique se você possui os seguintes requisitos:
@@ -49,10 +53,14 @@ Exemplos de como você pode utilizar as APIs criadas. Por exemplo:
 http
 ## Para Testar importe a Collection do Json em seu Postman na raiz do projeto
 - [Notifications Webflux.postman_collection.json](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/Notifications%20Webflux.postman_collection.json)
+## Endpoints
+- [/notification](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/notification_endpoints.png)
+- [/user](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/user_endpoints.png)
+- [/job](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/job_endpoints.png)
 
 Contato
 Fabio Henrique Piedade de Souza
 
-[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza)
-[Email](fabio.henrique.psouza@gmail.com)
-[Link do Projeto](https://github.com/fahpsouza/notifications-reative-webflux)
+[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | 
+[Email](fabio.henrique.psouza@gmail.com) | 
+[Link do Projeto](https://github.com/fahpsouza/notifications-reative-webflux) 
