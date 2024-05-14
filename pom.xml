@@ -11,8 +11,8 @@
 	<groupId>com.apirest</groupId>
 	<artifactId>webflux</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>webflux</name>
-	<description>Demo project for Spring Boot</description>
+	<name>notification-reative</name>
+	<description>Envio reativo de notificações com Webflux</description>
 
 	<properties>
 		<java.version>1.8</java.version>

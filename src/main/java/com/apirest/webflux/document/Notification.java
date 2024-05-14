@@ -4,23 +4,25 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class Playlist {
+public class Notification {
 	
 	
 	
-//	public Playlist(String id, String nome) {
-//		super();
-//		this.id = id;
-//		this.nome = nome;
-//	}
+	public Notification(String id, String nome, String message) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.message = message;
+	}
 	
 	
 	@Id
 	private String id;
 	private String nome;
-	
-	
-	public String getId() {
+	private String message;
+
+
+    public String getId() {
 		return id;
 	}
 	public void setId(String id) {
@@ -32,7 +34,6 @@ public class Playlist {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
-
+	public String getMessage() {return message;}
+	public void setMessage(String message) {this.message = message;}
 }
