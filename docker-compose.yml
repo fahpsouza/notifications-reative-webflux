@@ -1,11 +1,11 @@
 version: '3.9'
 services:
   db:
-    image: postgres:12
+    image: mongodb:12
     container_name: db
     environment:
       POSTGRES_DB: db_notifications
-      POSTGRES_USER: postgres
+      POSTGRES_USER: mongodb
       POSTGRES_PASSWORD: Hnkx@7701
     ports:
       - "5432:5432"

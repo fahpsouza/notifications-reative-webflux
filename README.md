@@ -12,15 +12,17 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - Dockerfile
 - docker-compose.yml
 
-Iniciando
-Estas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e testes.
+## Arquitetura Proposta
+
+## FLuxograma
+[FLuxograma](https://github.com/fahpsouza/notifications/blob/main/docs/arquitetura_proposta.drawio)
 
 ## Pré-requisitos
 Antes de começar, verifique se você possui os seguintes requisitos:
 - Docker
 - Docker Compose
 - Instale o MongoDB
-- Java na sua máquina. 
+- Java 11 na sua máquina. 
 
 Veja instruções detalhadas no site oficial de 
 - [MongoDB](https://docs.mongodb.com/manual/installation/)
@@ -45,12 +47,12 @@ Uso
 Exemplos de como você pode utilizar as APIs criadas. Por exemplo:
 
 http
-## Para Testar importe a Collection do Json em seu Postman na razi do projeto
+## Para Testar importe a Collection do Json em seu Postman na raiz do projeto
 - [Notifications Webflux.postman_collection.json](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/Notifications%20Webflux.postman_collection.json)
 
 Contato
-Fabio Henrique Piedade de Souza 
-– Linkedin = https://www.linkedin.com/in/fabio-h-p-de-souza/ 
-– Email = fabio.henrique.psouza@gmail.com
+Fabio Henrique Piedade de Souza
 
-Link do Projeto: https://github.com/fahpsouza/notifications-reative-webflux
+[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza)
+[Email](fabio.henrique.psouza@gmail.com)
+[Link do Projeto](https://github.com/fahpsouza/notifications-reative-webflux)
