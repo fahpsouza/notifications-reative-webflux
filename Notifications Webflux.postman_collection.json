@@ -40,7 +40,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"message\": \"4 - Ola minha notificação enviada via webflux mongodb\",\r\n  \"notificationType\": \"EMAIL\",\r\n  \"userId\": \"6643c20c2ef52a2f0c232f67\"\r\n}",
+							"raw": "{\r\n  \"message\": \"4 - Ola minha notificação enviada via webflux mongodb\",\r\n  \"notificationType\": \"EMAIL\",\r\n  \"userId\": \"6643c85e2ef52a550011846f\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -73,7 +73,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8352/notification/6643c2212ef52a2f0c232f68",
+							"raw": "http://localhost:8352/notification/6643c8a52ef52a5500118474",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -81,7 +81,7 @@
 							"port": "8352",
 							"path": [
 								"notification",
-								"6643c2212ef52a2f0c232f68"
+								"6643c8a52ef52a5500118474"
 							],
 							"query": [
 								{
@@ -138,6 +138,51 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "/notifications/reative/webflux/{userId}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/notification/reative/webflux/?userId=6643c7ea2ef52a550011846d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"notification",
+								"reative",
+								"webflux",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6643c7ea2ef52a550011846d"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -170,7 +215,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"nataliaAlvesSouza90\",\r\n    \"acceptReceivingNotifications\": true\r\n}",
+							"raw": "{\r\n    \"nome\": \"liviaSouza13\",\r\n    \"acceptReceivingNotifications\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -214,7 +259,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8352/user/6643c18a2ef52a2f0c232f64",
+							"raw": "http://localhost:8352/user/6643c7ea2ef52a550011846d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -222,7 +267,7 @@
 							"port": "8352",
 							"path": [
 								"user",
-								"6643c18a2ef52a2f0c232f64"
+								"6643c7ea2ef52a550011846d"
 							],
 							"query": [
 								{
@@ -241,7 +286,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8352/user/unsubscribe/6643c18a2ef52a2f0c232f64",
+							"raw": "http://localhost:8352/user/unsubscribe/6643c7e22ef52a550011846c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -250,7 +295,7 @@
 							"path": [
 								"user",
 								"unsubscribe",
-								"6643c18a2ef52a2f0c232f64"
+								"6643c7e22ef52a550011846c"
 							],
 							"query": [
 								{
@@ -294,7 +339,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"jobName\": \"JOB_SCHEDULE_SEND_NOTIFICATIONS\",\r\n    \"jobNameDescription\": \"Job schedule to run and send notifications for each user\",\r\n    \"intervalTime\": 10,\r\n    \"userId\": \"6643c1962ef52a2f0c232f65\",\r\n    \"activatedJob\": true\r\n}",
+							"raw": "{\r\n    \"jobName\": \"JOB_SCHEDULE_SEND_NOTIFICATIONS\",\r\n    \"jobNameDescription\": \"Job schedule to run and send notifications for each user\",\r\n    \"intervalTime\": 5,\r\n    \"userId\": \"6643c7ea2ef52a550011846d\",\r\n    \"activatedJob\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -338,7 +383,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8352/job/6643c1e72ef52a2f0c232f66",
+							"raw": "http://localhost:8352/job/6643c8282ef52a550011846e",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -346,7 +391,7 @@
 							"port": "8352",
 							"path": [
 								"job",
-								"6643c1e72ef52a2f0c232f66"
+								"6643c8282ef52a550011846e"
 							],
 							"query": [
 								{
