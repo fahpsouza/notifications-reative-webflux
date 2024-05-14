@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "69c4a3ba-d5e5-496a-a403-da7bb8ff49e3",
+		"name": "Notifications Webflux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1328409"
+	},
+	"item": [
+		{
+			"name": "/notifications",
+			"item": [
+				{
+					"name": "/notification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8352/notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/notification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"fabiohpsouza83\",\r\n    \"message\": \"10 - Ola minha notificação enviada via webflux mongodb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/notification/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"notification",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/notifications/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/notification/6642e2c12ef52a824cf41a4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"notification",
+								"6642e2c12ef52a824cf41a4f"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/notifications/reative/webflux",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/notification/reative/webflux",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"notification",
+								"reative",
+								"webflux"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/user",
+			"item": [
+				{
+					"name": "/user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8352/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"fabiohpsouza83\",\r\n    \"acceptReceivingNotifications\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/user/664307e42ef52a610c16dc79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"user",
+								"664307e42ef52a610c16dc79"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/unsubscribe/{id}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6642e5792ef52a1228d5527d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/user/unsubscribe/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"user",
+								"unsubscribe",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

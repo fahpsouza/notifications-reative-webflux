@@ -40,10 +40,10 @@ public class NotificationController {
 	public Flux<Tuple2<Long, Notification>> getNotificationByWebflux(){
 
 		System.out.println("---Start get Notification by WEBFLUX--- " + LocalDateTime.now());
-		Flux<Long> interval = Flux.interval(Duration.ofSeconds(3));
-        Flux<Notification> playlistFlux = notificationService.findAll();
+		Flux<Long> interval = Flux.interval(Duration.ofSeconds(5));
+        Flux<Notification> notificationFlux = notificationService.findAll();
 		System.out.println("Passou pelo Notification webflux");
-        return Flux.zip(interval, playlistFlux);
+        return Flux.zip(interval, notificationFlux);
         
 	}
 
