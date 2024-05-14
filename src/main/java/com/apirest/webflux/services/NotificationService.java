@@ -10,5 +10,6 @@ public interface NotificationService {
 	Flux<Notification> findAll();
 	Mono<Notification> findById(String id);
 	Mono<Notification> save(Notification notification);
+	Mono<Void> delete(Notification notification);
 
 }

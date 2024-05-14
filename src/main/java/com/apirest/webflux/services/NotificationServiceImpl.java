@@ -30,4 +30,10 @@ public class NotificationServiceImpl implements NotificationService {
 		return notificationRespository.save(notification);
 	}
 
+	@Override
+	public Mono<Void> delete(Notification notification) {
+		return notificationRespository.deleteById(notification.getId());
+	}
+
+
 }

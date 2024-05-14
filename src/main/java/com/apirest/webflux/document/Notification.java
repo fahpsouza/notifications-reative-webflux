@@ -3,7 +3,7 @@ package com.apirest.webflux.document;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection = "notification")
 public class Notification {
 	
 	
@@ -22,6 +22,7 @@ public class Notification {
 	private String message;
 
 
+
     public String getId() {
 		return id;
 	}
@@ -36,4 +37,5 @@ public class Notification {
 	}
 	public String getMessage() {return message;}
 	public void setMessage(String message) {this.message = message;}
+
 }
