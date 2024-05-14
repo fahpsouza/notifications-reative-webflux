@@ -30,7 +30,7 @@ Antes de começar, verifique se você possui os seguintes requisitos:
 - Java 11 na sua máquina. 
 
 Veja instruções detalhadas no site oficial de 
-- [MongoDB](https://docs.mongodb.com/manual/installation/)
+- [MongoDB](https://docs.mongodb.com/manual/installation/) <br>
 - [Java](https://www.java.com/en/download/help/download_options.html)
 
 ## Clone o repositório para sua máquina local:
@@ -57,11 +57,11 @@ http
 ## Endpoints
 ![/notification](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/notification_endpoints.png) <br>
 ![/user](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/user_endpoints.png) <br>
-![/job](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/job_endpoints.png)
+![/job](https://github.com/fahpsouza/notifications-reative-webflux/blob/master/docs/job_endpoints.png) <br>
 
 Contato
 Fabio Henrique Piedade de Souza
 
-[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) | <br>
-[Email](fabio.henrique.psouza@gmail.com) | <br>
+[Linkedin](https://www.linkedin.com/in/fabio-h-p-de-souza) |
+[Email](fabio.henrique.psouza@gmail.com) | 
 [Link do Projeto](https://github.com/fahpsouza/notifications-reative-webflux) 
