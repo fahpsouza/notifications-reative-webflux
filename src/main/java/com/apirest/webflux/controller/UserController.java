@@ -29,14 +29,9 @@ public class UserController {
 		return userService.save(user);
 	}
 
-//	@PostMapping("/user/unsubscribe")
-//	public Mono<User> unsubscribe(@RequestBody String id) {
-//		return userRespository.findById(id)
-//				.map(user -> {
-//					user.setAcceptReceivingNotifications(false);
-//					return userRespository.save(user);)
-//
-//				});
-//	}
+	@DeleteMapping("/user/unsubscribe/{id}")
+	public Mono<Void> unsubscribeUser(@PathVariable String id) {
+		return userService.unsubscribeUser(id);
+	}
 
 }

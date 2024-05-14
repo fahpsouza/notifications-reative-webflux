@@ -12,28 +12,24 @@ import reactor.core.publisher.Mono;
 public class UserServiceImpl implements UserService {
 	
 	@Autowired
-	UserRespository userRespository;
+	UserRespository userRepository;
 
 	@Override
-	public Flux<User> findAll() {return userRespository.findAll();}
+	public Flux<User> findAll() {return userRepository.findAll();}
 
 	@Override
 	public Mono<User> findById(String id) {
-		return userRespository.findById(id);
+		return userRepository.findById(id);
 	}
 
 	@Override
 	public Mono<User> save(User user) {
-		return userRespository.save(user);
+		return userRepository.save(user);
 	}
 
-	@Override
-	public void unsubscribe(String id) {
-		 userRespository.findById(id)
-				.map(user -> {
-					user.setAcceptReceivingNotifications(false);
-					return userRespository.save(user);
-				});
+	public Mono<Void> unsubscribeUser(String id) {
+		return userRepository.findById(id)
+				.flatMap(user -> userRepository.delete(user));
 	}
 
 	public void enviarNotificacao(NotificationType tipo, String mensagem) {
@@ -63,6 +59,10 @@ public class UserServiceImpl implements UserService {
 	private void enviarPush(String mensagem) {
 		// Lógica para enviar notificação Push
 		System.out.println("Enviando Push Notification: " + mensagem);
+	}
+
+	public Mono<User> createUser(User user) {
+		return userRepository.save(user);
 	}
 
 

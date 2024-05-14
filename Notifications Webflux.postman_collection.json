@@ -40,7 +40,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"fabiohpsouza83\",\r\n    \"message\": \"10 - Ola minha notificação enviada via webflux mongodb\"\r\n}",
+							"raw": "{\r\n  \"message\": \"4 - Ola minha notificação enviada via webflux mongodb\",\r\n  \"notificationType\": \"EMAIL\",\r\n  \"userId\": \"6643c20c2ef52a2f0c232f67\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -64,9 +64,6 @@
 				},
 				{
 					"name": "/notifications/id",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [
@@ -75,17 +72,8 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8352/notification/6642e2c12ef52a824cf41a4f",
+							"raw": "http://localhost:8352/notification/6643c2212ef52a2f0c232f68",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -93,7 +81,7 @@
 							"port": "8352",
 							"path": [
 								"notification",
-								"6642e2c12ef52a824cf41a4f"
+								"6643c2212ef52a2f0c232f68"
 							],
 							"query": [
 								{
@@ -182,7 +170,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"fabiohpsouza83\",\r\n    \"acceptReceivingNotifications\": true\r\n}",
+							"raw": "{\r\n    \"nome\": \"nataliaAlvesSouza90\",\r\n    \"acceptReceivingNotifications\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -226,7 +214,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8352/user/664307e42ef52a610c16dc79",
+							"raw": "http://localhost:8352/user/6643c18a2ef52a2f0c232f64",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -234,7 +222,7 @@
 							"port": "8352",
 							"path": [
 								"user",
-								"664307e42ef52a610c16dc79"
+								"6643c18a2ef52a2f0c232f64"
 							],
 							"query": [
 								{
@@ -248,26 +236,12 @@
 					"response": []
 				},
 				{
-					"name": "/user/unsubscribe/{id}",
+					"name": "user/unsubscribe/{id}",
 					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"6642e5792ef52a1228d5527d\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
+						"method": "DELETE",
+						"header": [],
 						"url": {
-							"raw": "http://localhost:8352/user/unsubscribe/",
+							"raw": "http://localhost:8352/user/unsubscribe/6643c18a2ef52a2f0c232f64",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -276,7 +250,103 @@
 							"path": [
 								"user",
 								"unsubscribe",
-								""
+								"6643c18a2ef52a2f0c232f64"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/job",
+			"item": [
+				{
+					"name": "/job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8352/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobName\": \"JOB_SCHEDULE_SEND_NOTIFICATIONS\",\r\n    \"jobNameDescription\": \"Job schedule to run and send notifications for each user\",\r\n    \"intervalTime\": 10,\r\n    \"userId\": \"6643c1962ef52a2f0c232f65\",\r\n    \"activatedJob\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/job/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8352/job/6643c1e72ef52a2f0c232f66",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8352",
+							"path": [
+								"job",
+								"6643c1e72ef52a2f0c232f66"
 							],
 							"query": [
 								{

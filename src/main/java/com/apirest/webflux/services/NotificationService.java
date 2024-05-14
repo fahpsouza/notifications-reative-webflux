@@ -11,5 +11,6 @@ public interface NotificationService {
 	Mono<Notification> findById(String id);
 	Mono<Notification> save(Notification notification);
 	Mono<Void> delete(Notification notification);
+	Flux<Notification> findAllByUserId(String userId);
 
 }

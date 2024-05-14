@@ -47,4 +47,15 @@ public class NotificationController {
         
 	}
 
+	@GetMapping(value= "/notification/reative/webflux/{userId}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+	public Flux<Tuple2<Long, Notification>> getNotificationByWebflux(@PathVariable String userId){
+
+		System.out.println("---Start get Notification by userId--- " + LocalDateTime.now());
+		Flux<Long> interval = Flux.interval(Duration.ofSeconds(5));
+		Flux<Notification> notificationFlux = notificationService.findAllByUserId(userId);
+		System.out.println("Passou pelo Notification webflux - userId");
+		return Flux.zip(interval, notificationFlux);
+
+	}
+
 }

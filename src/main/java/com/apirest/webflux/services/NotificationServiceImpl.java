@@ -34,6 +34,10 @@ public class NotificationServiceImpl implements NotificationService {
 	public Mono<Void> delete(Notification notification) {
 		return notificationRespository.deleteById(notification.getId());
 	}
+	@Override
+	public Flux<Notification> findAllByUserId(String userId) {
+		return notificationRespository.findAllByUserId(userId);
+	}
 
 
 }

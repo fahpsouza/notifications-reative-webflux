@@ -14,6 +14,9 @@ public class User  {
         this.acceptReceivingNotifications = acceptReceivingNotifications;
     }
 
+    public User() {
+    }
+
     @Id
     private String id;
     private String nome;

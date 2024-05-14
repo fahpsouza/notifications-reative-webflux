@@ -3,7 +3,9 @@ package com.apirest.webflux.document;
 public enum NotificationType {
     SMS("sms"),
     EMAIL("email"),
+    WEB("web"),
     PUSH("push");
+
 
     private String notificationType;
 
@@ -25,6 +27,8 @@ public enum NotificationType {
                 return "E-Mail";
             case PUSH:
                 return "Push Notification";
+            case WEB:
+                return "Web Site";
             default:
                 return super.toString();
         }
