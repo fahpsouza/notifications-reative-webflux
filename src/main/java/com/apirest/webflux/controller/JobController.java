@@ -26,7 +26,7 @@ public class JobController {
 	}
 
 
-	@PostMapping
+	@PostMapping("/job")
 	public Mono<Job> createJob(@RequestBody Job job) {
 		return jobService.createJob(job);
 	}

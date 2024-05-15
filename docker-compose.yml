@@ -1,27 +1,23 @@
-version: '3.9'
 services:
-  db:
-    image: mongodb:12
-    container_name: db
+  mongo:
+    image: mongo:7.0.9
+    restart: always
+    container_name: mongo
     environment:
-      POSTGRES_DB: db_notifications
-      POSTGRES_USER: mongodb
-      POSTGRES_PASSWORD: Hnkx@7701
+      MONGO_INITDB_ROOT_USERNAME: fabiohpsouza
+      MONGO_INITDB_ROOT_PASSWORD: Hnkx@7701
+      MONGO_INITDB_DATABASE: test
     ports:
-      - "5432:5432"
+      - "27017:27017"
 
-  app:
-    image: 'fabiohpsouza/notifications-app:0.1.6'
-    container_name: app
+  myappwebflux:
+    image: 'fabiohpsouza/notif-appwebflux:0.0.3'
+    container_name: myappwebflux
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=Hnkx@7701
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db_notifications
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=Hnkx@7701
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      MONGO_USERNAME: fabiohpsouza
+      MONGO_PASSWORD: Hnkx@7701
+      MONGO_DB: test
     ports:
-      - "8006:8005"
+      - "8352:8352"
     depends_on:
-      - db
-
+      - mongo
