@@ -40,7 +40,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"message\": \"4 - Ola minha notificação enviada via webflux mongodb\",\r\n  \"notificationType\": \"EMAIL\",\r\n  \"userId\": \"6643c85e2ef52a550011846f\"\r\n}",
+							"raw": "{\r\n  \"message\": \"10 - Ola minha notificação enviada via webflux mongodb usando DockerFile e docker-compose.yml\",\r\n  \"notificationType\": \"PUSH\",\r\n  \"userId\": \"6647ce61a7b11b0001ab4fc8\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -48,15 +48,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8352/notification/",
+							"raw": "http://localhost:8352/notification",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8352",
 							"path": [
-								"notification",
-								""
+								"notification"
 							]
 						}
 					},
@@ -73,7 +72,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8352/notification/6643c8a52ef52a5500118474",
+							"raw": "http://localhost:8352/notification/6647ce1ca7b11b0001ab4fc2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -81,7 +80,7 @@
 							"port": "8352",
 							"path": [
 								"notification",
-								"6643c8a52ef52a5500118474"
+								"6647ce1ca7b11b0001ab4fc2"
 							],
 							"query": [
 								{
@@ -259,7 +258,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8352/user/6643c7ea2ef52a550011846d",
+							"raw": "http://localhost:8352/user/66478d018fbab707b4664b4d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -267,7 +266,7 @@
 							"port": "8352",
 							"path": [
 								"user",
-								"6643c7ea2ef52a550011846d"
+								"66478d018fbab707b4664b4d"
 							],
 							"query": [
 								{
@@ -339,7 +338,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"jobName\": \"JOB_SCHEDULE_SEND_NOTIFICATIONS\",\r\n    \"jobNameDescription\": \"Job schedule to run and send notifications for each user\",\r\n    \"intervalTime\": 5,\r\n    \"userId\": \"6643c7ea2ef52a550011846d\",\r\n    \"activatedJob\": true\r\n}",
+							"raw": "{\r\n    \"jobName\": \"JOB_SCHEDULE_SEND_NOTIFICATIONS\",\r\n    \"jobNameDescription\": \"Job schedule to run and send notifications for each user\",\r\n    \"intervalTime\": 5,\r\n    \"userId\": \"6647cdb1a7b11b0001ab4fbd\",\r\n    \"activatedJob\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -383,7 +382,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8352/job/6643c8282ef52a550011846e",
+							"raw": "http://localhost:8352/job/6644ea44a57eee222254cedf",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -391,7 +390,7 @@
 							"port": "8352",
 							"path": [
 								"job",
-								"6643c8282ef52a550011846e"
+								"6644ea44a57eee222254cedf"
 							],
 							"query": [
 								{

@@ -3,6 +3,7 @@ package com.apirest.webflux.controller;
 import com.apirest.webflux.document.User;
 import com.apirest.webflux.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -25,6 +26,7 @@ public class UserController {
 
 
 	@PostMapping(value= "/user")
+	@ResponseStatus(HttpStatus.CREATED)
 	public Mono<User> save(@RequestBody User user){
 		return userService.save(user);
 	}

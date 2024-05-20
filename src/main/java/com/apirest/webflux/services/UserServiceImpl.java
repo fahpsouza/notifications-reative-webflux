@@ -15,7 +15,9 @@ public class UserServiceImpl implements UserService {
 	UserRespository userRepository;
 
 	@Override
-	public Flux<User> findAll() {return userRepository.findAll();}
+	public Flux<User> findAll() {
+		return userRepository.findAll();
+	}
 
 	@Override
 	public Mono<User> findById(String id) {
@@ -64,6 +66,5 @@ public class UserServiceImpl implements UserService {
 	public Mono<User> createUser(User user) {
 		return userRepository.save(user);
 	}
-
 
 }

@@ -1,21 +1,11 @@
+#Se autenticar root
+mongodb://fabiohpsouza:Hnkx@7701@localhost:27017
 
-db.createUser({
-    user: "myusermongodb",
-    pwd: "Secret1234",
-    roles: [
-        { role: "readWrite", db: "test" }
-    ]
-})
+use admin
+
+db.getUsers()
 
 
-db.createUser(
-    {	user: "myusermongodb",
-        pwd: "Secret1234",
-    
-        roles:[{role: "userAdminAnyDatabase" , db:"notification-db-webflux-local"}]})
-
-mongodb://<credentials>@localhost:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.5
-mongodb://myusermongodb@localhost:27017/
 
 db.createRole({
     role: "readWriteAnyDatabase",
@@ -25,15 +15,21 @@ db.createRole({
     roles: []
   })
 
-  --------------------------------------------------
 
   db.createUser({
     user: "adminUser",
     pwd: "Secret1234",
     roles: [
-      { role: "dbOwner", db: "notification-db-webflux-local" }
+      { role: "dbOwner", db: "admin" }
     ]
   })
 
-  mongodb://adminUser:Secret1234@localhost:27017/
-  
+  db.createUser({
+    user: "adminWebflux",
+    pwd: "Secret1234",
+    roles: [
+      { role: "dbOwner", db: "notification-db-webflux-docker-local" }
+    ]
+  })
+
+  mongodb://adminUser:Secret1234@localhost:27017/notification-db-webflux-docker-local?authSource=admin

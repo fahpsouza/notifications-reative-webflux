@@ -3,8 +3,10 @@ package com.apirest.webflux.controller;
 import com.apirest.webflux.document.Notification;
 import com.apirest.webflux.services.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
@@ -28,10 +30,12 @@ public class NotificationController {
 	@GetMapping(value= "/notification/{id}")
 	public Mono<Notification> getNotificationId(@PathVariable String id){
 		return notificationService.findById(id);
+
 	}
 
 
-	@PostMapping(value= "/notification")
+	@PostMapping(value= "/notification/receipt")
+	@ResponseStatus(HttpStatus.CREATED)
 	public Mono<Notification> save(@RequestBody Notification notification){
 		return notificationService.save(notification);
 	}

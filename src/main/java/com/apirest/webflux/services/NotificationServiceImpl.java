@@ -1,11 +1,11 @@
 package com.apirest.webflux.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.apirest.webflux.document.Notification;
 import com.apirest.webflux.repository.NotificationRespository;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -34,10 +34,14 @@ public class NotificationServiceImpl implements NotificationService {
 	public Mono<Void> delete(Notification notification) {
 		return notificationRespository.deleteById(notification.getId());
 	}
+
 	@Override
 	public Flux<Notification> findAllByUserId(String userId) {
 		return notificationRespository.findAllByUserId(userId);
 	}
 
+//	public <T> Mono<T> monoResponseStatusNotFoundException(){
+//		return Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, "Notification ID not found"));
+//	}
 
 }

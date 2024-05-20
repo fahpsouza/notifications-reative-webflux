@@ -3,6 +3,7 @@ package com.apirest.webflux.document;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
 @Document(collection = "notification")
 public class Notification {
 
@@ -22,15 +23,6 @@ public class Notification {
 	private String userId;
 
 
-    public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getMessage() {return message;}
-	public void setMessage(String message) {this.message = message;}
-	public String getNotificationType() {return notificationType;}
 	public void setNotificationType(Enum notification_type) {
 		this.notificationType = String.valueOf(NotificationType.fromString(notificationType));
 	}
@@ -40,6 +32,38 @@ public class Notification {
 	}
 
 	public void setUser(String userId) {
+		this.userId = userId;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getNotificationType() {
+		return notificationType;
+	}
+
+	public void setNotificationType(String notificationType) {
+		this.notificationType = notificationType;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 }
