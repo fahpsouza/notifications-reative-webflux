@@ -1,0 +1,4 @@
+FROM mongo:latest
+
+# Instalar o cliente mongo
+RUN apt-get update && apt-get install -y mongodb-clients

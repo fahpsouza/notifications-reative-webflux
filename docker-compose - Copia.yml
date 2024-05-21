@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: adminUser
+      MONGO_INITDB_ROOT_PASSWORD: '12345678'
+      MONGO_INITDB_DATABASE: notification-db-webflux-docker-local
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  myappwebflux:
+    image: 'fabiohpsouza/notif-appwebflux:0.1.11'
+    container_name: myappwebflux
+    environment:
+      SPRING_DATA_MONGODB_AUTHENTICATION_DATABASE: admin
+      SPRING_DATA_MONGODB_URI: mongodb://mongouser:Secret1234@mongo:27017/notification-db-webflux-docker-local
+    depends_on:
+      - mongo
+    ports:
+      - "8353:8352"
+
+volumes:
+  mongo-data:
