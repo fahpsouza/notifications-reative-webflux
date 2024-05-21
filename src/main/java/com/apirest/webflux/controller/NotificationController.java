@@ -14,6 +14,8 @@ import reactor.util.function.Tuple2;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -43,19 +45,31 @@ public class NotificationController {
 	
 	@GetMapping(value= "/notification/reative/webflux", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
 	public Flux<Tuple2<Long, Notification>> getNotificationByWebflux(){
-		//Flux<Long> interval = Flux.interval(Duration.ofSeconds(1).map(seq -> "Evento de servidor: " + LocalTime.now().toString());
-		Flux<Long> interval = Flux.interval(Duration.ofSeconds(1))
-				.map(seq -> Long.valueOf("Evento de servidor: " + LocalTime.now().toString()));  // Mapeia cada emissão para uma string
+
+		System.out.println("---Start get Notification by WEBFLUX--- " + LocalDateTime.now());
+		Flux<Long> interval = Flux.interval(Duration.ofSeconds(1));
         Flux<Notification> notificationFlux = notificationService.findAll();
+		System.out.println("Passou pelo Notification webflux");
         return Flux.zip(interval, notificationFlux);
         
 	}
 
-	@GetMapping(value= "/notification/reative/webflux/{userId}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-	public Flux<Tuple2<Long, Notification>> getNotificationByWebfluxById(@PathVariable String userId){
-		Flux<Long> interval = Flux.interval(Duration.ofSeconds(1));
-		Flux<Notification> notificationFlux = notificationService.findAllByUserId(userId);
-		return Flux.zip(interval, notificationFlux);
+	/// testes
+	// Lista thread-safe para armazenar as notificações
+	private final List<Notification> notifications = new CopyOnWriteArrayList<>();
+
+	@GetMapping(value = "/notifications/reative/webflux/test", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+	public Flux<String> streamNotifications() {
+
+		// Fluxo de notificações do tipo 1, emitindo a cada 2 segundos
+		Flux<String> notifications1 = Flux.interval(Duration.ofSeconds(2))
+				.map(seq -> "Notificação Tipo 1 - " + LocalTime.now().toString());
+
+		Flux<Notification> notificationFlux = notificationService.findAll();
+
+		// Combinando os fluxos de notificações
+		return Flux.zip(notifications1, notificationFlux,
+				(n1, n2) -> "Combinado: " + n1 + " | Id: " + n2.getId() + " - Msg: " + n2.getMessage() + " - UserId: " + n2.getUserId());
 
 	}
 
