@@ -1,8 +1,8 @@
 services:
-  mongodb:
+  mongodbcont:
     image: mongo:latest
     restart: always
-    container_name: mongodb
+    container_name: mongodbcont
     environment:
       MONGO_INITDB_ROOT_USERNAME: adminUser
       MONGO_INITDB_ROOT_PASSWORD: Secret1234
@@ -15,11 +15,11 @@ services:
     container_name: myappwebflux
     environment:
       SPRING_DATA_MONGODB_AUTHENTICATION_DATABASE: admin
-      SPRING_DATA_MONGODB_URI: mongodb://adminUser:Secret1234@172.18.0.2:27017/notification-db-webflux-docker-local?authSource=admin
+      SPRING_DATA_MONGODB_URI: mongodb://adminUser:Secret1234@mongodbcont:27017/notification-db-webflux-docker-local?authSource=admin
       MONGO_INITDB_ROOT_USERNAME: adminUser
       MONGO_INITDB_ROOT_PASSWORD: Secret1234
       MONGO_INITDB_DATABASE: notification-db-webflux-docker-local
     ports:
       - "8080:8080"
     depends_on:
-      - mongodb
+      - mongodbcont

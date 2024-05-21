@@ -13,6 +13,7 @@ import reactor.util.function.Tuple2;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -42,22 +43,18 @@ public class NotificationController {
 	
 	@GetMapping(value= "/notification/reative/webflux", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
 	public Flux<Tuple2<Long, Notification>> getNotificationByWebflux(){
-
-		System.out.println("---Start get Notification by WEBFLUX--- " + LocalDateTime.now());
-		Flux<Long> interval = Flux.interval(Duration.ofSeconds(1));
+		//Flux<Long> interval = Flux.interval(Duration.ofSeconds(1).map(seq -> "Evento de servidor: " + LocalTime.now().toString());
+		Flux<Long> interval = Flux.interval(Duration.ofSeconds(1))
+				.map(seq -> Long.valueOf("Evento de servidor: " + LocalTime.now().toString()));  // Mapeia cada emissão para uma string
         Flux<Notification> notificationFlux = notificationService.findAll();
-		System.out.println("Passou pelo Notification webflux");
         return Flux.zip(interval, notificationFlux);
         
 	}
 
 	@GetMapping(value= "/notification/reative/webflux/{userId}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
 	public Flux<Tuple2<Long, Notification>> getNotificationByWebfluxById(@PathVariable String userId){
-
-		System.out.println("---Start get Notification by userId--- " + LocalDateTime.now());
 		Flux<Long> interval = Flux.interval(Duration.ofSeconds(1));
 		Flux<Notification> notificationFlux = notificationService.findAllByUserId(userId);
-		System.out.println("Passou pelo Notification webflux - userId");
 		return Flux.zip(interval, notificationFlux);
 
 	}

@@ -2,6 +2,7 @@ package com.apirest.webflux.services;
 
 import com.apirest.webflux.document.Notification;
 import com.apirest.webflux.repository.NotificationRespository;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,8 @@ public class NotificationServiceImpl implements NotificationService {
 
 	@Override
 	public Mono<Notification> save(Notification notification) {
+		Gson gson = new Gson();
+		System.out.println("REQUEST RECEIVED: " + gson.toJson(notification));
 		return notificationRespository.save(notification);
 	}
 
