@@ -40,8 +40,4 @@ public class NotificationServiceImpl implements NotificationService {
 		return notificationRespository.findAllByUserId(userId);
 	}
 
-//	public <T> Mono<T> monoResponseStatusNotFoundException(){
-//		return Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, "Notification ID not found"));
-//	}
-
 }
